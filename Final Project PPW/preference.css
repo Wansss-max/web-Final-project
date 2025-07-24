@@ -1,0 +1,332 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Orbitron", sans-serif;
+  background: url("img/ben-neale-zpxKdH_xNSI-unsplash.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* === Header === */
+header {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #222;
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  border-left: 1px solid #444;
+  padding-left: 10px;
+}
+
+.nav-links li:first-child {
+  border-left: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* === Preference Container === */
+.preference-container {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 700px;
+  width: 90%;
+  margin: auto;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+}
+
+.preference-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #ffffff;
+  text-shadow: 3px 3px 5px rgba(91, 228, 247, 0.916);
+}
+
+/* === Form === */
+.preferences-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preferences-form label {
+  font-weight: bold;
+}
+
+.preferences-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.preferences-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.preferences-form button:hover {
+  background-color: #008ecc;
+}
+
+/* === Carousel === */
+.preview-slider {
+  position: relative;
+  max-width: 100%;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  display: none;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-img.active {
+  display: block;
+}
+
+.slide-nav {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slide-nav button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 5px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slide-nav button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* === Footer === */
+footer {
+  margin-top: auto;
+  background-color: rgba(18, 18, 18, 0.95);
+  color: #ccc;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #333;
+}
+
+/* === Hamburger === */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Media Query (Mobile) === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    width: 200px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .navbar.show {
+    display: block;
+    animation: fadeSlide 0.3s ease forwards;
+  }
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+
+  .nav-links li:first-child {
+    border-top: none;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-links a:hover {
+    background: rgba(0, 170, 255, 0.1);
+    color: #00aaff;
+  }
+
+  header .logo h1 {
+    font-size: 18px;
+  }
+
+  .preference-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .preferences-form select,
+  .preferences-form button {
+    width: 100%;
+  }
+
+  .preview-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .slide-nav {
+    margin-top: 10px;
+  }
+}
+
+/* === Media Query Tablet/Desktop Optional === */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .preferences-form {
+    width: 80%;
+    margin: auto;
+  }
+
+  .slide-img {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .preferences-form {
+    width: 60%;
+    margin: auto;
+  }
+
+  .slide-img {
+    max-width: 600px;
+  }
+}

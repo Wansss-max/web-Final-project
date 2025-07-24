@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Berita Game - Gamer's Bar</title>
+    <link rel="stylesheet" href="news.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-gamepad"></i>
+        <h1>Gamer's Bar</h1>
+      </div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HolidayDiscount.html">Summer Sale</a></li>
+        <li><a href="news.html" style="color: #00aaff">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="preference.html">Preference</a></li>
+        <li><a href="signin.html">Login</a></li>
+      </ul>
+    </nav>
+    <section class="news-section">
+      <h2>News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img
+            alt="Berita Game 1"
+            src="img/download-call-of-duty-wallpaper-hohxmri9wwh1nksi.jpg"
+          />
+          <div class="news-content">
+            <h3>Call Of Duty Merilis DLC Baru</h3>
+            <p>
+              Ekspansi terbaru hadir dengan peta baru dan fitur co-op mode
+              hingga 4 pemain.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img
+            alt="Berita Game 2"
+            src="img/wp4661370-resident-evil-2-2019-wallpapers.jpg"
+          />
+          <div class="news-content">
+            <h3>Versi Remake Dari Game Legendaris</h3>
+            <p>
+              Resident Evil 2 sekarang hadir dengan versi remake-nya yang
+              menyajikan nostalgia dan grafis memukau.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img
+            alt="Berita Game 3"
+            src="img/monster-hunter-world-pc-pc-pc-pc-pc-iz5zjvj1fcexbww9.jpg"
+          />
+          <div class="news-content">
+            <h3>DLC Terbaru Dari Monster Hunter Series</h3>
+            <p>
+              DLC baru dari game Monster Hunter telah lama ditunggu para hunter
+              veteran.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img alt="Berita Game 4" src="img/capsule_616x353.jpg" />
+          <div class="news-content">
+            <h3>Game Souls Like Baru Rilis</h3>
+            <p>
+              Game Souls Like yang baru rilis ini langsung masuk nominasi Game
+              of the Year.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img alt="Berita Game 5" src="img/acshadows-915x915.jpg" />
+          <div class="news-content">
+            <h3>DLC Terbaru Dari Assasin's Creed Series</h3>
+            <p>
+              DLC baru dari game Assassin's Creed telah lama ditunggu para
+              player lama.
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img alt="Berita Game 6" src="img/Fantasy Quest.png" />
+          <div class="news-content">
+            <h3>Game RPG Mengadakan Tournament</h3>
+            <p>
+              RPG pertama yang mengadakan tournament antar tim berisi 5 player.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 — Situs ini dibuat untuk keperluan final project.
+    </footer>
+    <script>
+      //Hamburger toggle
+      const hamburger = document.getElementById("hamburger");
+      const navbar = document.getElementById("navbar");
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

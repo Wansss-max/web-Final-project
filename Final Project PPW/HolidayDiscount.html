@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Store - Summer Sale</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="HolidayDiscount.css" />
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+      <source src="vid/Untitled (1080 x 720 px).mp4" type="video/mp4" />
+    </video>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-gamepad"></i>
+        <h1>Gamer's Bar</h1>
+      </div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="HolidayDiscount.html" style="color: #00aaff">Summer Sale</a>
+        </li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="preference.html">Preference</a></li>
+        <li><a href="signin.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input id="search-bar" placeholder="Cari game..." type="text" />
+      <i class="fas fa-search search-icon" id="search-icon"></i>
+    </div>
+
+    <!-- Game Store Content -->
+    <main class="game-store">
+      <h2>SUMMER SALE 2025</h2>
+      <div class="store-catalog">
+        <div class="store-item">
+          <img src="img/wp4661370-resident-evil-2-2019-wallpapers.jpg" />
+          <h3>Resident Evil 2 Remake</h3>
+          <p>Kembali ke Mimpi Buruk Masa Lalu.</p>
+          <div class="store-bottom">
+            <div class="price-container">
+              <span class="discount">-75%</span>
+              <span class="original-price">Rp500.000</span>
+              <span class="final-price">Rp125.000</span>
+            </div>
+          </div>
+          <button class="buy-now">Beli Sekarang</button>
+        </div>
+
+        <div class="store-item">
+          <img src="img/download-call-of-duty-wallpaper-hohxmri9wwh1nksi.jpg" />
+          <h3>Call Of Duty: Black Ops II</h3>
+          <p>Strategi, Kecepatan, dan Aksi Dalam Perang Modern Futuristik.</p>
+          <div class="store-bottom">
+            <div class="price-container">
+              <span class="discount">-85%</span>
+              <span class="original-price">Rp800.000</span>
+              <span class="final-price">Rp120.000</span>
+            </div>
+          </div>
+          <button class="buy-now">Beli Sekarang</button>
+        </div>
+
+        <div class="store-item">
+          <img src="img/Fantasy Quest.png" />
+          <h3>Fantasy Quest</h3>
+          <p>RPG,Petualangan di Dalam Negeri Dongeng.</p>
+          <div class="store-bottom">
+            <div class="price-container">
+              <span class="discount">-90%</span>
+              <span class="original-price">Rp990.000</span>
+              <span class="final-price">Rp99.000</span>
+            </div>
+          </div>
+          <button class="buy-now">Beli Sekarang</button>
+        </div>
+
+        <div class="store-item">
+          <img
+            src="img/monster-hunter-world-pc-pc-pc-pc-pc-iz5zjvj1fcexbww9.jpg"
+          />
+          <h3>Monster Hunter World</h3>
+          <p>Jelajahi dunia penuh makhluk raksasa.</p>
+          <div class="store-bottom">
+            <div class="price-container">
+              <span class="discount">-75%</span>
+              <span class="original-price">Rp600.000</span>
+              <span class="final-price">Rp150.000</span>
+            </div>
+          </div>
+          <button class="buy-now">Beli Sekarang</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Form Pembayaran Modal -->
+    <div id="payment-modal" class="payment-modal">
+      <div class="payment-form animate-popup">
+        <span class="close-modal">&times;</span>
+        <h2><i class="fas fa-credit-card"></i> Form Pembayaran</h2>
+        <form id="payment-form-content">
+          <div class="form-group">
+            <label for="nama"><i class="fas fa-user"></i> Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="game"
+              ><i class="fas fa-gamepad"></i> Game yang Dibeli:</label
+            >
+            <select id="game" name="game" required>
+              <option value="">-- Pilih Game --</option>
+              <option value="resident-evil">Resident Evil 2 Remake</option>
+              <option value="cod">Call Of Duty: Black Ops II</option>
+              <option value="monster-hunter">Monster Hunter World</option>
+              <option value="fantasy-quest">Fantasy Quest</option>
+              <option value="fantasy-quest">Assasin Creed : Shadows</option>
+              <option value="fantasy-quest">Cronos : The New Dawn</option>
+              <option value="fantasy-quest">Elden Ring : The Nightreigh</option>
+              <option value="fantasy-quest">Elden Ring</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="metode"
+              ><i class="fas fa-wallet"></i> Metode Pembayaran:</label
+            >
+            <select id="metode" name="metode" required>
+              <option value="">-- Pilih Metode --</option>
+              <option value="gopay">GoPay</option>
+              <option value="dana">DANA</option>
+              <option value="ovo">OVO</option>
+              <option value="transfer">Transfer Bank</option>
+              <option value="cod">Cash on Delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="catatan"
+              ><i class="fas fa-comment-dots"></i> Catatan Tambahan:</label
+            >
+            <textarea id="catatan" name="catatan" rows="3"></textarea>
+          </div>
+          <button type="submit" class="submit-btn glow-btn">
+            <i class="fas fa-shopping-cart"></i> Bayar Sekarang
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 — Situs ini dibuat untuk keperluan final project.
+    </footer>
+
+    <script>
+      //Hamburger toggle
+      const hamburger = document.getElementById("hamburger");
+      const navbar = document.getElementById("navbar");
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("show");
+      });
+
+      //Search bar
+      const searchIcon = document.getElementById("search-icon");
+      const searchBar = document.getElementById("search-bar");
+
+      searchIcon.addEventListener("click", () => {
+        searchBar.classList.toggle("show");
+        searchBar.focus();
+      });
+
+      searchBar.addEventListener("input", () => {
+        const keyword = searchBar.value.toLowerCase();
+        const games = document.querySelectorAll(".store-item");
+
+        games.forEach((game) => {
+          const title = game.querySelector("h3").textContent.toLowerCase();
+          game.style.display = title.includes(keyword) ? "block" : "none";
+        });
+      });
+
+      //Payment Form
+      const modal = document.getElementById("payment-modal");
+      const closeModal = document.querySelector(".close-modal");
+      const buyButtons = document.querySelectorAll(".buy-now");
+      const gameSelect = document.getElementById("game");
+
+      buyButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          modal.style.display = "block";
+          gameSelect.selectedIndex = index + 1;
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      document
+        .getElementById("payment-form-content")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nama = document.getElementById("nama").value;
+          const email = document.getElementById("email").value;
+          const game = document.getElementById("game").value;
+          const metode = document.getElementById("metode").value;
+
+          if (!nama || !email || !game || !metode) {
+            alert("Harap isi semua kolom yang diperlukan!");
+            return;
+          }
+
+          alert(
+            `Terima kasih, ${nama}! Pembelian ${game} dengan metode ${metode} berhasil.`
+          );
+          modal.style.display = "none";
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Gamer's Bar</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-gamepad"></i>
+        <h1>Gamer's Bar</h1>
+      </div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HolidayDiscount.html">Summer Sale</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html" style="color: #00aaff">Contact</a></li>
+        <li><a href="preference.html">Preference</a></li>
+        <li><a href="signin.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Konten utama -->
+    <main class="main-content">
+      <div class="contact-container">
+        <h2>Hubungi Kami</h2>
+        <form action="#" method="post">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" placeholder="Nama Anda" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Anda"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-comment-dots"></i>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Pesan Anda"
+              required
+              style="resize: none"
+            ></textarea>
+          </div>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 — Situs ini dibuat untuk keperluan final project.
+    </footer>
+
+    <script>
+      //Hamburger toggle
+      const hamburger = document.getElementById("hamburger");
+      const navbar = document.getElementById("navbar");
+      hamburger.addEventListener("click", () => {
+        navbar.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
