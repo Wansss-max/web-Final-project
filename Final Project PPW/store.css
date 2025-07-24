@@ -1,0 +1,437 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: url("img/ben-neale-zpxKdH_xNSI-unsplash.jpg") no-repeat center
+    center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  border-left: 1px solid #444;
+  padding-left: 10px;
+}
+
+.nav-links li:first-child {
+  border-left: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 40px auto;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 12px 50px 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Game Store */
+.game-store {
+  text-align: center;
+  padding: 20px;
+}
+
+.game-store h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 3px 3px 5px rgba(91, 228, 247, 0.916);
+}
+
+.store-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Card Game */
+.store-item {
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.store-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.3);
+}
+
+.store-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.store-item h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 12px 0 6px 0;
+  min-height: 48px;
+}
+
+.store-item p {
+  font-size: 13px;
+  color: #ccc;
+  min-height: 48px;
+  margin-bottom: 10px;
+}
+
+/* Harga */
+.price-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.discount {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.final-price {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* Modal styling */
+.payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+}
+
+.payment-form {
+  background-color: #1c1f26;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #ff4444;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #2a2d34;
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0077cc;
+}
+
+/* Animasi */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-popup {
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+/* Glow efek */
+.glow-btn {
+  box-shadow: 0 0 10px #00aaff, 0 0 20px #0077cc;
+}
+
+.payment-form h2 {
+  text-align: center;
+  color: #00aaff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+}
+
+/* Input focus efek */
+.payment-form input:focus,
+.payment-form select:focus,
+.payment-form textarea:focus {
+  outline: none;
+  border: 2px solid #00aaff;
+  background-color: #2f3540;
+  transition: 0.2s ease;
+}
+
+/* Ikon di label */
+.payment-form label i {
+  margin-right: 6px;
+  color: #00aaff;
+}
+
+/* Tombol */
+.buy-now {
+  width: 100%;
+  padding: 10px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+  background-color: #007acc;
+}
+
+/* Footer */
+footer {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(18, 18, 18, 0.95);
+  color: #ccc;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    width: 200px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .navbar.show {
+    display: block;
+    animation: fadeSlide 0.3s ease forwards;
+  }
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+
+  .nav-links li:first-child {
+    border-top: none;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-links a:hover {
+    background: rgba(0, 170, 255, 0.1);
+    color: #00aaff;
+  }
+  .search-container {
+    padding: 0 15px;
+    margin: 20px auto 30px auto;
+  }
+
+  .store-catalog {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .store-item {
+    width: 100%;
+    max-width: 340px;
+  }
+}
